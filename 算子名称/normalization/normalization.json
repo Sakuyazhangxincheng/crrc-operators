@@ -1,0 +1,65 @@
+{
+  "about": {
+    "author": {
+      "name": "\u7b97\u6cd5\u5f00\u53d1\u56e2\u961f"
+    },
+    "description": {
+      "zh_CN": "\u5bf9\u4e00\u7ef4\u6570\u503c\u5e8f\u5217\u6267\u884c Min-Max \u5f52\u4e00\u5316\u5230 [0,1] \u533a\u95f4\u3002"
+    }
+  },
+  "version": "1.0",
+  "functions": [
+    {
+      "args": [],
+      "hint": {
+        "en": "normalization",
+        "zh": "\u5f52\u4e00\u5316",
+        "en_US": "normalization",
+        "zh_CN": "\u5f52\u4e00\u5316"
+      },
+      "name": "normalization",
+      "node": {
+        "label": {
+          "en": "normalization",
+          "zh": "\u5f52\u4e00\u5316",
+          "en_US": "normalization",
+          "zh_CN": "\u5f52\u4e00\u5316"
+        },
+        "category": ""
+      },
+      "inputs": [
+        {
+          "label": {
+            "en": "inputOne",
+            "zh": "\u8f93\u5165\u4e00",
+            "en_US": "inputOne",
+            "zh_CN": "\u8f93\u5165\u4e00"
+          },
+          "chartType": "LINE",
+          "visualType": "1"
+        }
+      ],
+      "example": "",
+      "outputs": [
+        {
+          "label": {
+            "en": "outputOne",
+            "zh": "\u8f93\u51fa\u4e00",
+            "en_US": "outputOne",
+            "zh_CN": "\u8f93\u51fa\u4e00"
+          },
+          "chartType": "LINE",
+          "visualType": "1"
+        }
+      ],
+      "aggregate": false,
+      "filesPath": "normalization.py",
+      "otherFilePath": null,
+      "armFilePath": [],
+      "amdFilePath": []
+    }
+  ],
+  "packageName": "normalization",
+  "dependencies": [],
+  "intelligentAlgorithm": false
+}

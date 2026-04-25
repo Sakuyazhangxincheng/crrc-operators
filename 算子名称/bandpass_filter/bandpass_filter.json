@@ -1,0 +1,160 @@
+{
+  "about": {
+    "author": {
+      "name": "\u7b97\u6cd5\u5f00\u53d1\u56e2\u961f"
+    },
+    "description": {
+      "zh_CN": "\u5728\u9891\u57df\u5bf9\u4e00\u7ef4\u4fe1\u53f7\u6267\u884c\u5e26\u901a\u6ee4\u6ce2\uff0c\u4ec5\u4fdd\u7559\u76ee\u6807\u9891\u5e26\u5206\u91cf\u3002"
+    }
+  },
+  "version": "1.0",
+  "functions": [
+    {
+      "args": [
+        {
+          "hint": {
+            "en": "low ratio",
+            "zh": "\u4f4e\u622a\u6b62\u6bd4\u503c",
+            "en_US": "low ratio",
+            "zh_CN": "\u4f4e\u622a\u6b62\u6bd4\u503c"
+          },
+          "name": "low_ratio",
+          "rule": {
+            "extend": {
+              "list": [],
+              "operator": 0
+            },
+            "control": "text",
+            "numRule": {
+              "numMin": {
+                "sign": 4,
+                "value": "0"
+              },
+              "isEffect": true,
+              "numberType": 2,
+              "oddEvenType": 2
+            },
+            "confDataType": "float"
+          },
+          "type": "float",
+          "exist": false,
+          "label": {
+            "en": "low ratio",
+            "zh": "\u4f4e\u622a\u6b62\u6bd4\u503c",
+            "en_US": "low ratio",
+            "zh_CN": "\u4f4e\u622a\u6b62\u6bd4\u503c"
+          },
+          "hidden": false,
+          "control": "text",
+          "disabled": false,
+          "maxValue": "",
+          "minValue": "",
+          "optional": false,
+          "required": true,
+          "numberType": "2",
+          "description": "\u9891\u5e26\u4e0b\u754c\uff0c\u8981\u6c42 0 < low_ratio < 0.5\u3002",
+          "oddEvenType": "2",
+          "isVirtualParam": "N",
+          "crrcDefualtValue": "0.1",
+          "connection_related": false
+        },
+        {
+          "hint": {
+            "en": "high ratio",
+            "zh": "\u9ad8\u622a\u6b62\u6bd4\u503c",
+            "en_US": "high ratio",
+            "zh_CN": "\u9ad8\u622a\u6b62\u6bd4\u503c"
+          },
+          "name": "high_ratio",
+          "rule": {
+            "extend": {
+              "list": [],
+              "operator": 0
+            },
+            "control": "text",
+            "numRule": {
+              "numMin": {
+                "sign": 4,
+                "value": "0"
+              },
+              "isEffect": true,
+              "numberType": 2,
+              "oddEvenType": 2
+            },
+            "confDataType": "float"
+          },
+          "type": "float",
+          "exist": false,
+          "label": {
+            "en": "high ratio",
+            "zh": "\u9ad8\u622a\u6b62\u6bd4\u503c",
+            "en_US": "high ratio",
+            "zh_CN": "\u9ad8\u622a\u6b62\u6bd4\u503c"
+          },
+          "hidden": false,
+          "control": "text",
+          "disabled": false,
+          "maxValue": "",
+          "minValue": "",
+          "optional": false,
+          "required": true,
+          "numberType": "2",
+          "description": "\u9891\u5e26\u4e0a\u754c\uff0c\u8981\u6c42 low_ratio < high_ratio < 0.5\u3002",
+          "oddEvenType": "2",
+          "isVirtualParam": "N",
+          "crrcDefualtValue": "0.3",
+          "connection_related": false
+        }
+      ],
+      "hint": {
+        "en": "bandpass_filter",
+        "zh": "\u5e26\u901a\u6ee4\u6ce2",
+        "en_US": "bandpass_filter",
+        "zh_CN": "\u5e26\u901a\u6ee4\u6ce2"
+      },
+      "name": "bandpass_filter",
+      "node": {
+        "label": {
+          "en": "bandpass_filter",
+          "zh": "\u5e26\u901a\u6ee4\u6ce2",
+          "en_US": "bandpass_filter",
+          "zh_CN": "\u5e26\u901a\u6ee4\u6ce2"
+        },
+        "category": ""
+      },
+      "inputs": [
+        {
+          "label": {
+            "en": "inputOne",
+            "zh": "\u8f93\u5165\u4e00",
+            "en_US": "inputOne",
+            "zh_CN": "\u8f93\u5165\u4e00"
+          },
+          "chartType": "LINE",
+          "visualType": "1"
+        }
+      ],
+      "example": "",
+      "outputs": [
+        {
+          "label": {
+            "en": "outputOne",
+            "zh": "\u8f93\u51fa\u4e00",
+            "en_US": "outputOne",
+            "zh_CN": "\u8f93\u51fa\u4e00"
+          },
+          "chartType": "LINE",
+          "visualType": "1"
+        }
+      ],
+      "aggregate": false,
+      "filesPath": "bandpass_filter.py",
+      "otherFilePath": null,
+      "armFilePath": [],
+      "amdFilePath": []
+    }
+  ],
+  "packageName": "bandpass_filter",
+  "dependencies": [],
+  "intelligentAlgorithm": false
+}

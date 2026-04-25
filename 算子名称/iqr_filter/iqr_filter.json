@@ -1,0 +1,113 @@
+{
+  "about": {
+    "author": {
+      "name": "\u7b97\u6cd5\u5f00\u53d1\u56e2\u961f"
+    },
+    "description": {
+      "zh_CN": "\u57fa\u4e8e\u56db\u5206\u4f4d\u8ddd(IQR)\u89c4\u5219\u68c0\u6d4b\u5f02\u5e38\u503c\uff0c\u5e76\u5c06\u5f02\u5e38\u503c\u66ff\u6362\u4e3a\u4e2d\u4f4d\u6570\u3002"
+    }
+  },
+  "version": "1.0",
+  "functions": [
+    {
+      "args": [
+        {
+          "hint": {
+            "en": "iqr factor",
+            "zh": "IQR\u7cfb\u6570",
+            "en_US": "iqr factor",
+            "zh_CN": "IQR\u7cfb\u6570"
+          },
+          "name": "k",
+          "rule": {
+            "extend": {
+              "list": [],
+              "operator": 0
+            },
+            "control": "text",
+            "numRule": {
+              "numMin": {
+                "sign": 4,
+                "value": "0"
+              },
+              "isEffect": true,
+              "numberType": 2,
+              "oddEvenType": 2
+            },
+            "confDataType": "float"
+          },
+          "type": "float",
+          "exist": false,
+          "label": {
+            "en": "iqr factor",
+            "zh": "IQR\u7cfb\u6570",
+            "en_US": "iqr factor",
+            "zh_CN": "IQR\u7cfb\u6570"
+          },
+          "hidden": false,
+          "control": "text",
+          "disabled": false,
+          "maxValue": "",
+          "minValue": "",
+          "optional": false,
+          "required": true,
+          "numberType": "2",
+          "description": "IQR\u7cfb\u6570\uff0c\u5fc5\u987b\u4e3a\u5927\u4e8e\u7b49\u4e8e 0 \u7684\u6d6e\u70b9\u6570\uff0c\u5e38\u7528 1.5\u3002",
+          "oddEvenType": "2",
+          "isVirtualParam": "N",
+          "crrcDefualtValue": "1.5",
+          "connection_related": false
+        }
+      ],
+      "hint": {
+        "en": "iqr_filter",
+        "zh": "IQR\u8fc7\u6ee4",
+        "en_US": "iqr_filter",
+        "zh_CN": "IQR\u8fc7\u6ee4"
+      },
+      "name": "iqr_filter",
+      "node": {
+        "label": {
+          "en": "iqr_filter",
+          "zh": "IQR\u8fc7\u6ee4",
+          "en_US": "iqr_filter",
+          "zh_CN": "IQR\u8fc7\u6ee4"
+        },
+        "category": ""
+      },
+      "inputs": [
+        {
+          "label": {
+            "en": "inputOne",
+            "zh": "\u8f93\u5165\u4e00",
+            "en_US": "inputOne",
+            "zh_CN": "\u8f93\u5165\u4e00"
+          },
+          "chartType": "LINE",
+          "visualType": "1"
+        }
+      ],
+      "example": "",
+      "outputs": [
+        {
+          "label": {
+            "en": "outputOne",
+            "zh": "\u8f93\u51fa\u4e00",
+            "en_US": "outputOne",
+            "zh_CN": "\u8f93\u51fa\u4e00"
+          },
+          "chartType": "LINE",
+          "visualType": "1"
+        }
+      ],
+      "aggregate": false,
+      "filesPath": "iqr_filter.py",
+      "otherFilePath": null,
+      "armFilePath": [],
+      "amdFilePath": []
+    }
+  ],
+  "packageName": "iqr_filter",
+  "dependencies": [],
+  "intelligentAlgorithm": false
+}

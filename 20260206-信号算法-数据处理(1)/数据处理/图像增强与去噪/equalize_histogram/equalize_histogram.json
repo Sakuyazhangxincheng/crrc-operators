@@ -1,0 +1,76 @@
+{
+    "version": "1.0",
+    "about": {
+        "author": {
+            "name": null,
+            "email": null,
+            "company": null,
+            "website": null
+        },
+        "description": {
+            "en_US": null,
+            "zh_CN": "该模块支持对图像或视频数据源的对比度进行增强，对读取到的图像的灰度值分布进行调整，使图像的灰度值在整个灰度级范围内均匀分布，从而增强图像的对比度",
+            "en": null,
+            "zh": null
+        }
+    },
+    "packageName": "equalize_histogram", 
+    "dependencies": [
+    ],
+    "virtualEnvType": null,
+    "env": null,
+    "functions": [
+        {
+            "name": "equalize_histogram",
+            "example": "",
+            "filesPath": "http://47.95.178.35:9000/module-library/module/equalize_histogram/equalize_histogram.py",
+            "otherFilePath": null,
+            "aggregate": false,
+            "hint": {
+                "en_US": "Equalize Histogram",
+                "zh_CN": "直方图均衡化",
+                "en": "Equalize Histogram",
+                "zh": "直方图均衡化"
+            },
+            "args": [
+            ],
+            "inputs": [
+                {
+                    "visualType": "0",
+                    "chartType": "",
+                    "label": {
+                        "en_US": "input",
+                        "en": "input",
+                        "zh_CN": "输入",
+                        "zh": "输入"
+                    },
+                    "value": ""
+                }
+            ],
+            "outputs": [
+                {
+                    "visualType": "0",
+                    "chartType": "",
+                    "label": {
+                        "en_US": "output",
+                        "en": "output",
+                        "zh_CN": "输出",
+                        "zh": "输出"
+                    },
+                    "value": ""
+                }
+            ],
+            "node": {
+                "icon": null,
+                "label": {
+                    "en_US": "equalize_histogram",
+                    "en": "equalize_histogram",
+                    "zh_CN": "直方图均衡化",
+                    "zh": "直方图均衡化"
+                },
+                "category": ""
+            }
+        }
+    ],
+    "properties": null
+  }

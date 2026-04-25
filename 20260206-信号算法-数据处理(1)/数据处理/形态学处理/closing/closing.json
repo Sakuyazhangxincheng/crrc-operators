@@ -1,0 +1,109 @@
+{
+    "version": "1.0",
+    "about": {
+        "author": {
+            "name": null,
+            "email": null,
+            "company": null,
+            "website": null
+        },
+        "description": {
+            "en_US": null,
+            "zh_CN": "该模块支持对图像或视频数据源进行闭运算，通过先膨胀后腐蚀的操作来处理读取到的图像，主要用于填充小孔和连接图像中的断裂部分",
+            "en": null,
+            "zh": null
+        }
+    },
+    "packageName": "closing", 
+    "dependencies": [
+    ],
+    "virtualEnvType": null,
+    "env": null,
+    "functions": [
+        {
+            "name": "closing",
+            "example": "",
+            "filesPath": "http://47.95.178.35:9000/module-library/module/closing/closing.py",
+            "otherFilePath": null,
+            "aggregate": false,
+            "hint": {
+                "en_US": "Closing",
+                "zh_CN": "闭运算",
+                "en": "Closing",
+                "zh": "闭运算"
+            },
+            "args": [
+                {
+                    "name": "kernel_size",
+                    "exist": false,
+                    "hidden": false,
+                    "optional": false,
+                    "placeholder": null,
+                    "connection_related": false,
+                    "control": "text",
+                    "type": "int",
+                    "hint": {
+                        "en_US": "kernel_size",
+                        "zh_CN": "核大小",
+                        "en": "kernel_size",
+                        "zh": "核大小"
+                    },
+                    "label": {
+                        "en_US": "kernel_size",
+                        "zh_CN": "核大小",
+                        "en": "kernel_size",
+                        "zh": "核大小"
+                    },
+                    "values": null,
+                    "description": "闭运算过程中核的大小，决定了膨胀和腐蚀操作的范围和程度，其值为大于1的奇数",
+                    "crrcDefualtValue": "3",
+                    "required": true,
+                    "minValue": "3",
+                    "maxValue": "99",
+                    "maxLength": null,
+                    "minLength": null,
+                    "numberType": "1",
+                    "oddEvenType": "1",
+                    "disabled": false
+                }               
+            ],
+            "inputs": [
+                {
+                    "visualType": "0",
+                    "chartType": "",
+                    "label": {
+                        "en_US": "input",
+                        "en": "input",
+                        "zh_CN": "输入",
+                        "zh": "输入"
+                    },
+                    "value": ""
+                }
+            ],
+            "outputs": [
+                {
+                    "visualType": "0",
+                    "chartType": "",
+                    "label": {
+                        "en_US": "output",
+                        "en": "output",
+                        "zh_CN": "输出",
+                        "zh": "输出"
+                    },
+                    "value": ""
+                }
+            ],
+            "node": {
+                "icon": null,
+                "label": {
+                    "en_US": "closing",
+                    "en": "closing",
+                    "zh_CN": "闭运算",
+                    "zh": "闭运算"
+                },
+                "category": ""
+            }
+        }
+    ],
+    "properties": null
+  }

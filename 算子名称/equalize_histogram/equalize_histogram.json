@@ -1,0 +1,74 @@
+{
+  "version": "1.0",
+  "about": {
+    "author": {
+      "name": null,
+      "email": null,
+      "company": null,
+      "website": null
+    },
+    "description": {
+      "en_US": null,
+      "zh_CN": "\u8be5\u6a21\u5757\u652f\u6301\u5bf9\u56fe\u50cf\u6216\u89c6\u9891\u6570\u636e\u6e90\u7684\u5bf9\u6bd4\u5ea6\u8fdb\u884c\u589e\u5f3a\uff0c\u5bf9\u8bfb\u53d6\u5230\u7684\u56fe\u50cf\u7684\u7070\u5ea6\u503c\u5206\u5e03\u8fdb\u884c\u8c03\u6574\uff0c\u4f7f\u56fe\u50cf\u7684\u7070\u5ea6\u503c\u5728\u6574\u4e2a\u7070\u5ea6\u7ea7\u8303\u56f4\u5185\u5747\u5300\u5206\u5e03\uff0c\u4ece\u800c\u589e\u5f3a\u56fe\u50cf\u7684\u5bf9\u6bd4\u5ea6",
+      "en": null,
+      "zh": null
+    }
+  },
+  "packageName": "equalize_histogram",
+  "dependencies": [],
+  "virtualEnvType": null,
+  "env": null,
+  "functions": [
+    {
+      "name": "equalize_histogram",
+      "example": "",
+      "filesPath": "equalize_histogram.py",
+      "otherFilePath": null,
+      "aggregate": false,
+      "hint": {
+        "en_US": "Equalize Histogram",
+        "zh_CN": "\u76f4\u65b9\u56fe\u5747\u8861\u5316",
+        "en": "Equalize Histogram",
+        "zh": "\u76f4\u65b9\u56fe\u5747\u8861\u5316"
+      },
+      "args": [],
+      "inputs": [
+        {
+          "visualType": "0",
+          "chartType": "",
+          "label": {
+            "en_US": "input",
+            "en": "input",
+            "zh_CN": "\u8f93\u5165",
+            "zh": "\u8f93\u5165"
+          },
+          "value": ""
+        }
+      ],
+      "outputs": [
+        {
+          "visualType": "0",
+          "chartType": "",
+          "label": {
+            "en_US": "output",
+            "en": "output",
+            "zh_CN": "\u8f93\u51fa",
+            "zh": "\u8f93\u51fa"
+          },
+          "value": ""
+        }
+      ],
+      "node": {
+        "icon": null,
+        "label": {
+          "en_US": "equalize_histogram",
+          "en": "equalize_histogram",
+          "zh_CN": "\u76f4\u65b9\u56fe\u5747\u8861\u5316",
+          "zh": "\u76f4\u65b9\u56fe\u5747\u8861\u5316"
+        },
+        "category": ""
+      }
+    }
+  ],
+  "properties": null
+}

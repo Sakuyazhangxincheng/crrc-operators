@@ -1,0 +1,109 @@
+{
+    "version": "1.0",
+    "about": {
+        "author": {
+            "name": null,
+            "email": null,
+            "company": null,
+            "website": null
+        },
+        "description": {
+            "en_US": null,
+            "zh_CN": "该模块支持对图像或视频数据源进行伽马校正，对读取到的图像的亮度和对比度进行调整，从而改善图像的视觉效果",
+            "en": null,
+            "zh": null
+        }
+    },
+    "packageName": "gamma_correction", 
+    "dependencies": [
+    ],
+    "virtualEnvType": null,
+    "env": null,
+    "functions": [
+        {
+            "name": "gamma_correction",
+            "example": "",
+            "filesPath": "http://47.95.178.35:9000/module-library/module/gamma_correction/gamma_correction.py",
+            "otherFilePath": null,
+            "aggregate": false,
+            "hint": {
+                "en_US": "Gamma Correction",
+                "zh_CN": "伽马校正",
+                "en": "Gamma Correction",
+                "zh": "伽马校正"
+            },
+            "args": [
+                {
+                    "name": "gamma",
+                    "exist": false,
+                    "hidden": false,
+                    "optional": false,
+                    "placeholder": null,
+                    "connection_related": false,
+                    "control": "text",
+                    "type": "int",
+                    "hint": {
+                        "en_US": "gamma",
+                        "zh_CN": "伽马值",
+                        "en": "gamma",
+                        "zh": "伽马值"
+                    },
+                    "label": {
+                        "en_US": "gamma",
+                        "zh_CN": "伽马值",
+                        "en": "gamma",
+                        "zh": "伽马值"
+                    },
+                    "values": null,
+                    "description": "用于伽马校正过程中的指数值，其值在[0.1,5.0]范围内",
+                    "crrcDefualtValue": "2.2",
+                    "required": true,
+                    "minValue": "0.1",
+                    "maxValue": "5.0",
+                    "maxLength": null,
+                    "minLength": null,
+                    "numberType": "2",
+                    "oddEvenType": "2",
+                    "disabled": false
+                }
+            ],
+            "inputs": [
+                {
+                    "visualType": "0",
+                    "chartType": "",
+                    "label": {
+                        "en_US": "input",
+                        "en": "input",
+                        "zh_CN": "输入",
+                        "zh": "输入"
+                    },
+                    "value": ""
+                }
+            ],
+            "outputs": [
+                {
+                    "visualType": "0",
+                    "chartType": "",
+                    "label": {
+                        "en_US": "output",
+                        "en": "output",
+                        "zh_CN": "输出",
+                        "zh": "输出"
+                    },
+                    "value": ""
+                }
+            ],
+            "node": {
+                "icon": null,
+                "label": {
+                    "en_US": "gamma_correction",
+                    "en": "gamma_correction",
+                    "zh_CN": "伽马校正",
+                    "zh": "伽马校正"
+                },
+                "category": ""
+            }
+        }
+    ],
+    "properties": null
+  }

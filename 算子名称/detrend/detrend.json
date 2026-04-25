@@ -1,0 +1,117 @@
+{
+  "about": {
+    "author": {
+      "name": "\u4e2d\u8f66\u6167\u884d\u9879\u76ee\u7814\u53d1\u56e2\u961f"
+    },
+    "description": {
+      "zh_CN": "\u53bb\u8d8b\u52bf\u662f\u6307\u4ece\u6570\u636e\u4e2d\u79fb\u9664\u4e00\u4e2a\u6216\u591a\u4e2a\u8d8b\u52bf\u6210\u5206\u7684\u8fc7\u7a0b\u3002\u4ece\u6570\u636e\u4e2d\u51cf\u53bb\u4e00\u6761\u6700\u4f18\u7684\u62df\u5408\u7ebf\uff0c\u4f7f\u53bb\u8d8b\u52bf\u540e\u7684\u6570\u636e\u5747\u503c\u4e3a\u96f6\u3002\u53bb\u8d8b\u52bf\u53ef\u4ee5\u6d88\u9664\u4f20\u611f\u5668\u5728\u83b7\u53d6\u6570\u636e\u65f6\u4ea7\u751f\u7684\u504f\u79fb\uff0c\u4ece\u800c\u5c06\u5206\u6790\u96c6\u4e2d\u5728\u6570\u636e\u672c\u8eab\u3002"
+    }
+  },
+  "version": "1.0",
+  "functions": [
+    {
+      "args": [
+        {
+          "hint": {
+            "en": "n",
+            "zh": "\u591a\u9879\u5f0f\u6b21\u6570",
+            "en_US": "n",
+            "zh_CN": "\u591a\u9879\u5f0f\u6b21\u6570"
+          },
+          "name": "n",
+          "rule": {
+            "extend": {
+              "list": [],
+              "operator": 0
+            },
+            "control": "text",
+            "numRule": {
+              "numMin": {
+                "sign": 4,
+                "value": "0"
+              },
+              "isEffect": true,
+              "numberType": 1,
+              "oddEvenType": 2
+            },
+            "confDataType": "int"
+          },
+          "type": "int",
+          "exist": false,
+          "label": {
+            "en": "n",
+            "zh": "\u591a\u9879\u5f0f\u6b21\u6570",
+            "en_US": "n",
+            "zh_CN": "\u591a\u9879\u5f0f\u6b21\u6570"
+          },
+          "hidden": false,
+          "control": "text",
+          "disabled": false,
+          "maxValue": "",
+          "minValue": "",
+          "optional": false,
+          "required": true,
+          "numberType": "2",
+          "description": "\u914d\u7f6e\u53bb\u9664\u51e0\u6b21\u591a\u9879\u5f0f\u8d8b\u52bf\uff0c\u53c2\u6570\u8bbe\u7f6e\u4e3a1\u65f6\uff0c\u53bb\u9664\u6570\u636e\u7ebf\u6027\u8d8b\u52bf\u3002",
+          "oddEvenType": "2",
+          "isVirtualParam": "N",
+          "crrcDefualtValue": "1",
+          "connection_related": false
+        }
+      ],
+      "hint": {
+        "en": "detrend",
+        "zh": "\u53bb\u9664\u591a\u9879\u5f0f\u8d8b\u52bf",
+        "en_US": "detrend",
+        "zh_CN": "\u53bb\u9664\u591a\u9879\u5f0f\u8d8b\u52bf"
+      },
+      "name": "detrend",
+      "node": {
+        "label": {
+          "en": "detrend",
+          "zh": "\u53bb\u9664\u591a\u9879\u5f0f\u8d8b\u52bf",
+          "en_US": "detrend",
+          "zh_CN": "\u53bb\u9664\u591a\u9879\u5f0f\u8d8b\u52bf"
+        },
+        "category": ""
+      },
+      "inputs": [
+        {
+          "label": {
+            "en": "inputOne",
+            "zh": "\u8f93\u5165\u4e00",
+            "en_US": "inputOne",
+            "zh_CN": "\u8f93\u5165\u4e00"
+          },
+          "chartType": "LINE",
+          "visualType": "1"
+        }
+      ],
+      "example": "",
+      "outputs": [
+        {
+          "label": {
+            "en": "outputOne",
+            "zh": "\u8f93\u51fa\u4e00",
+            "en_US": "outputOne",
+            "zh_CN": "\u8f93\u51fa\u4e00"
+          },
+          "chartType": "LINE",
+          "visualType": "1"
+        }
+      ],
+      "aggregate": false,
+      "filesPath": "detrend.py",
+      "otherFilePath": null,
+      "armFilePath": [
+        "http://60.204.224.63:19000/huiyan-platform/module-library/module/detrend/edge/libdetrend.so"
+      ],
+      "amdFilePath": [
+        "http://60.204.224.63:19000/huiyan-platform/module-library/module/detrend/cloud/libdetrend.so"
+      ]
+    }
+  ],
+  "packageName": "detrend",
+  "dependencies": [],
+  "intelligentAlgorithm": false
+}

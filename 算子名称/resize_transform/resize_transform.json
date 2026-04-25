@@ -1,0 +1,131 @@
+{
+  "version": "1.0",
+  "about": {
+    "author": {
+      "name": "\u7b97\u6cd5\u5f00\u53d1\u56e2\u961f",
+      "email": null,
+      "company": null,
+      "website": null
+    },
+    "description": {
+      "en_US": "Resize an image to the specified height and width.",
+      "zh_CN": "\u5bf9\u8f93\u5165\u56fe\u50cf\u6267\u884c\u7f29\u653e\u53d8\u6362\u3002",
+      "en": "Resize an image to the specified height and width.",
+      "zh": "\u5bf9\u8f93\u5165\u56fe\u50cf\u6267\u884c\u7f29\u653e\u53d8\u6362\u3002"
+    }
+  },
+  "packageName": "resize_transform",
+  "dependencies": [],
+  "virtualEnvType": null,
+  "env": null,
+  "functions": [
+    {
+      "name": "resize_transform",
+      "example": "",
+      "filesPath": "resize_transform.py",
+      "otherFilePath": null,
+      "aggregate": false,
+      "hint": {
+        "en_US": "Resize Transform",
+        "zh_CN": "\u7f29\u653e",
+        "en": "Resize Transform",
+        "zh": "\u7f29\u653e"
+      },
+      "args": [
+        {
+          "name": "target_height",
+          "exist": false,
+          "hidden": false,
+          "optional": false,
+          "placeholder": null,
+          "connection_related": false,
+          "control": "text",
+          "type": "int",
+          "hint": {
+            "en_US": "target height",
+            "zh_CN": "\u76ee\u6807\u9ad8\u5ea6",
+            "en": "target height",
+            "zh": "\u76ee\u6807\u9ad8\u5ea6"
+          },
+          "label": {
+            "en_US": "target height",
+            "zh_CN": "\u76ee\u6807\u9ad8\u5ea6",
+            "en": "target height",
+            "zh": "\u76ee\u6807\u9ad8\u5ea6"
+          },
+          "values": null,
+          "description": "\u76ee\u6807\u9ad8\u5ea6\uff0c\u5fc5\u987b\u4e3a\u5927\u4e8e\u7b49\u4e8e 1 \u7684\u6574\u6570\u3002",
+          "crrcDefualtValue": "256",
+          "required": true,
+          "minValue": "1",
+          "disabled": false
+        },
+        {
+          "name": "target_width",
+          "exist": false,
+          "hidden": false,
+          "optional": false,
+          "placeholder": null,
+          "connection_related": false,
+          "control": "text",
+          "type": "int",
+          "hint": {
+            "en_US": "target width",
+            "zh_CN": "\u76ee\u6807\u5bbd\u5ea6",
+            "en": "target width",
+            "zh": "\u76ee\u6807\u5bbd\u5ea6"
+          },
+          "label": {
+            "en_US": "target width",
+            "zh_CN": "\u76ee\u6807\u5bbd\u5ea6",
+            "en": "target width",
+            "zh": "\u76ee\u6807\u5bbd\u5ea6"
+          },
+          "values": null,
+          "description": "\u76ee\u6807\u5bbd\u5ea6\uff0c\u5fc5\u987b\u4e3a\u5927\u4e8e\u7b49\u4e8e 1 \u7684\u6574\u6570\u3002",
+          "crrcDefualtValue": "256",
+          "required": true,
+          "minValue": "1",
+          "disabled": false
+        }
+      ],
+      "inputs": [
+        {
+          "visualType": "0",
+          "chartType": "",
+          "label": {
+            "en_US": "input",
+            "en": "input",
+            "zh_CN": "\u8f93\u5165",
+            "zh": "\u8f93\u5165"
+          },
+          "value": ""
+        }
+      ],
+      "outputs": [
+        {
+          "visualType": "0",
+          "chartType": "",
+          "label": {
+            "en_US": "output",
+            "en": "output",
+            "zh_CN": "\u8f93\u51fa",
+            "zh": "\u8f93\u51fa"
+          },
+          "value": ""
+        }
+      ],
+      "node": {
+        "icon": null,
+        "label": {
+          "en_US": "resize_transform",
+          "en": "resize_transform",
+          "zh_CN": "\u7f29\u653e",
+          "zh": "\u7f29\u653e"
+        },
+        "category": ""
+      }
+    }
+  ],
+  "properties": null
+}

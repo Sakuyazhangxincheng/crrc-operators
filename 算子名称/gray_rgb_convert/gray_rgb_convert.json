@@ -1,0 +1,102 @@
+{
+  "version": "1.0",
+  "about": {
+    "author": {
+      "name": "\u7b97\u6cd5\u5f00\u53d1\u56e2\u961f",
+      "email": null,
+      "company": null,
+      "website": null
+    },
+    "description": {
+      "en_US": "Convert between grayscale and RGB images.",
+      "zh_CN": "\u6267\u884c\u7070\u5ea6\u56fe\u50cf\u4e0e RGB \u56fe\u50cf\u4e4b\u95f4\u7684\u53cc\u5411\u8f6c\u6362\u3002",
+      "en": "Convert between grayscale and RGB images.",
+      "zh": "\u6267\u884c\u7070\u5ea6\u56fe\u50cf\u4e0e RGB \u56fe\u50cf\u4e4b\u95f4\u7684\u53cc\u5411\u8f6c\u6362\u3002"
+    }
+  },
+  "packageName": "gray_rgb_convert",
+  "dependencies": [],
+  "virtualEnvType": null,
+  "env": null,
+  "functions": [
+    {
+      "name": "gray_rgb_convert",
+      "example": "",
+      "filesPath": "gray_rgb_convert.py",
+      "otherFilePath": null,
+      "aggregate": false,
+      "hint": {
+        "en_US": "Gray RGB Convert",
+        "zh_CN": "\u7070\u5ea6\u56fe\u50cf\u4e0eRGB\u4e92\u8f6c",
+        "en": "Gray RGB Convert",
+        "zh": "\u7070\u5ea6\u56fe\u50cf\u4e0eRGB\u4e92\u8f6c"
+      },
+      "args": [
+        {
+          "name": "mode",
+          "exist": false,
+          "hidden": false,
+          "optional": false,
+          "placeholder": null,
+          "connection_related": false,
+          "control": "text",
+          "type": "string",
+          "hint": {
+            "en_US": "mode",
+            "zh_CN": "\u8f6c\u6362\u6a21\u5f0f",
+            "en": "mode",
+            "zh": "\u8f6c\u6362\u6a21\u5f0f"
+          },
+          "label": {
+            "en_US": "mode",
+            "zh_CN": "\u8f6c\u6362\u6a21\u5f0f",
+            "en": "mode",
+            "zh": "\u8f6c\u6362\u6a21\u5f0f"
+          },
+          "values": null,
+          "description": "\u8f6c\u6362\u6a21\u5f0f\uff0c\u53ef\u9009\u503c\u4e3a rgb2gray \u6216 gray2rgb\u3002",
+          "crrcDefualtValue": "rgb2gray",
+          "required": true,
+          "disabled": false
+        }
+      ],
+      "inputs": [
+        {
+          "visualType": "0",
+          "chartType": "",
+          "label": {
+            "en_US": "input",
+            "en": "input",
+            "zh_CN": "\u8f93\u5165",
+            "zh": "\u8f93\u5165"
+          },
+          "value": ""
+        }
+      ],
+      "outputs": [
+        {
+          "visualType": "0",
+          "chartType": "",
+          "label": {
+            "en_US": "output",
+            "en": "output",
+            "zh_CN": "\u8f93\u51fa",
+            "zh": "\u8f93\u51fa"
+          },
+          "value": ""
+        }
+      ],
+      "node": {
+        "icon": null,
+        "label": {
+          "en_US": "gray_rgb_convert",
+          "en": "gray_rgb_convert",
+          "zh_CN": "\u7070\u5ea6\u56fe\u50cf\u4e0eRGB\u4e92\u8f6c",
+          "zh": "\u7070\u5ea6\u56fe\u50cf\u4e0eRGB\u4e92\u8f6c"
+        },
+        "category": ""
+      }
+    }
+  ],
+  "properties": null
+}

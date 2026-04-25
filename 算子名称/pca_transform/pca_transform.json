@@ -1,0 +1,113 @@
+{
+  "about": {
+    "author": {
+      "name": "\u7b97\u6cd5\u5f00\u53d1\u56e2\u961f"
+    },
+    "description": {
+      "zh_CN": "\u5bf9\u6837\u672c\u77e9\u9635\u6267\u884c PCA \u964d\u7ef4\uff0c\u8f93\u51fa\u4f4e\u7ef4\u4e3b\u6210\u5206\u8868\u793a\u3002"
+    }
+  },
+  "version": "1.0",
+  "functions": [
+    {
+      "args": [
+        {
+          "hint": {
+            "en": "n components",
+            "zh": "\u4fdd\u7559\u4e3b\u6210\u5206\u6570",
+            "en_US": "n components",
+            "zh_CN": "\u4fdd\u7559\u4e3b\u6210\u5206\u6570"
+          },
+          "name": "n_components",
+          "rule": {
+            "extend": {
+              "list": [],
+              "operator": 0
+            },
+            "control": "text",
+            "numRule": {
+              "numMin": {
+                "sign": 4,
+                "value": "1"
+              },
+              "isEffect": true,
+              "numberType": 1,
+              "oddEvenType": 2
+            },
+            "confDataType": "int"
+          },
+          "type": "int",
+          "exist": false,
+          "label": {
+            "en": "n components",
+            "zh": "\u4fdd\u7559\u4e3b\u6210\u5206\u6570",
+            "en_US": "n components",
+            "zh_CN": "\u4fdd\u7559\u4e3b\u6210\u5206\u6570"
+          },
+          "hidden": false,
+          "control": "text",
+          "disabled": false,
+          "maxValue": "",
+          "minValue": "",
+          "optional": false,
+          "required": true,
+          "numberType": "2",
+          "description": "\u4fdd\u7559\u4e3b\u6210\u5206\u6570\u91cf\uff0c\u5fc5\u987b\u4e3a\u5927\u4e8e\u7b49\u4e8e 1 \u7684\u6574\u6570\u3002",
+          "oddEvenType": "2",
+          "isVirtualParam": "N",
+          "crrcDefualtValue": "2",
+          "connection_related": false
+        }
+      ],
+      "hint": {
+        "en": "pca_transform",
+        "zh": "PCA",
+        "en_US": "pca_transform",
+        "zh_CN": "PCA"
+      },
+      "name": "pca_transform",
+      "node": {
+        "label": {
+          "en": "pca_transform",
+          "zh": "PCA",
+          "en_US": "pca_transform",
+          "zh_CN": "PCA"
+        },
+        "category": ""
+      },
+      "inputs": [
+        {
+          "label": {
+            "en": "inputOne",
+            "zh": "\u8f93\u5165\u4e00",
+            "en_US": "inputOne",
+            "zh_CN": "\u8f93\u5165\u4e00"
+          },
+          "chartType": "LINE",
+          "visualType": "1"
+        }
+      ],
+      "example": "",
+      "outputs": [
+        {
+          "label": {
+            "en": "outputOne",
+            "zh": "\u8f93\u51fa\u4e00",
+            "en_US": "outputOne",
+            "zh_CN": "\u8f93\u51fa\u4e00"
+          },
+          "chartType": "LINE",
+          "visualType": "1"
+        }
+      ],
+      "aggregate": false,
+      "filesPath": "pca_transform.py",
+      "otherFilePath": null,
+      "armFilePath": [],
+      "amdFilePath": []
+    }
+  ],
+  "packageName": "pca_transform",
+  "dependencies": [],
+  "intelligentAlgorithm": false
+}

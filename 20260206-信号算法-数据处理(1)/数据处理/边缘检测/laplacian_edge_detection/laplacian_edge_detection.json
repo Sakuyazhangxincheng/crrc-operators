@@ -1,0 +1,76 @@
+{
+    "version": "1.0",
+    "about": {
+        "author": {
+            "name": null,
+            "email": null,
+            "company": null,
+            "website": null
+        },
+        "description": {
+            "en_US": null,
+            "zh_CN": "该模块支持对图像或视频数据源进行图像边缘检测，通过拉普拉斯算子计算读取到的图像中每个像素点的二阶导数，以突出显示图像中的快速变化区域，检测图像中的边缘和轮廓",
+            "en": null,
+            "zh": null
+        }
+    },
+    "packageName": "laplacian_edge_detection", 
+    "dependencies": [
+    ],
+    "virtualEnvType": null,
+    "env": null,
+    "functions": [
+        {
+            "name": "laplacian_edge_detection",
+            "example": "",
+            "filesPath": "http://47.95.178.35:9000/module-library/module/laplacian_edge_detection/laplacian_edge_detection.py",
+            "otherFilePath": null,
+            "aggregate": false,
+            "hint": {
+                "en_US": "Laplacian Edge Detection",
+                "zh_CN": "拉普拉斯边缘检测",
+                "en": "Laplacian Edge Detection",
+                "zh": "拉普拉斯边缘检测"
+            },
+            "args": [
+            ],
+            "inputs": [
+                {
+                    "visualType": "0",
+                    "chartType": "",
+                    "label": {
+                        "en_US": "input",
+                        "en": "input",
+                        "zh_CN": "输入",
+                        "zh": "输入"
+                    },
+                    "value": ""
+                }
+            ],
+            "outputs": [
+                {
+                    "visualType": "0",
+                    "chartType": "",
+                    "label": {
+                        "en_US": "output",
+                        "en": "output",
+                        "zh_CN": "输出",
+                        "zh": "输出"
+                    },
+                    "value": ""
+                }
+            ],
+            "node": {
+                "icon": null,
+                "label": {
+                    "en_US": "laplacian_edge_detection",
+                    "en": "laplacian_edge_detection",
+                    "zh_CN": "拉普拉斯边缘检测",
+                    "zh": "拉普拉斯边缘检测"
+                },
+                "category": ""
+            }
+        }
+    ],
+    "properties": null
+  }

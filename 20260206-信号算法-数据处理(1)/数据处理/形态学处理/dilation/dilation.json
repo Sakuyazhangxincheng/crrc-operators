@@ -1,0 +1,142 @@
+{
+    "version": "1.0",
+    "about": {
+        "author": {
+            "name": null,
+            "email": null,
+            "company": null,
+            "website": null
+        },
+        "description": {
+            "en_US": null,
+            "zh_CN": "该模块支持对图像或视频数据源进行膨胀操作，主要用于填充读取到的图像中的空洞、扩大物体的大小以及连接相近的物体",
+            "en": null,
+            "zh": null
+        }
+    },
+    "packageName": "dilation", 
+    "dependencies": [
+    ],
+    "virtualEnvType": null,
+    "env": null,
+    "functions": [
+        {
+            "name": "dilation",
+            "example": "",
+            "filesPath": "http://47.95.178.35:9000/module-library/module/dilation/dilation.py",
+            "otherFilePath": null,
+            "aggregate": false,
+            "hint": {
+                "en_US": "Dilation",
+                "zh_CN": "膨胀",
+                "en": "Dilation",
+                "zh": "膨胀"
+            },
+            "args": [
+                {
+                    "name": "kernel_size",
+                    "exist": false,
+                    "hidden": false,
+                    "optional": false,
+                    "placeholder": null,
+                    "connection_related": false,
+                    "control": "text",
+                    "type": "int",
+                    "hint": {
+                        "en_US": "kernel_size",
+                        "zh_CN": "核大小",
+                        "en": "kernel_size",
+                        "zh": "核大小"
+                    },
+                    "label": {
+                        "en_US": "kernel_size",
+                        "zh_CN": "核大小",
+                        "en": "kernel_size",
+                        "zh": "核大小"
+                    },
+                    "values": null,
+                    "description": "在膨胀操作中，核是一个可定义的窗口，用于在图像上滑动并计算窗口内像素的最大值。核的大小指的是其宽度和高度，其值为大于1的奇数",
+                    "crrcDefualtValue": "3",
+                    "required": true,
+                    "minValue": "3",
+                    "maxValue": "99",
+                    "maxLength": null,
+                    "minLength": null,
+                    "numberType": "1",
+                    "oddEvenType": "1",
+                    "disabled": false
+                },
+                {
+                    "name": "iterations",
+                    "exist": false,
+                    "hidden": false,
+                    "optional": false,
+                    "placeholder": null,
+                    "connection_related": false,
+                    "control": "text",
+                    "type": "int",
+                    "hint": {
+                        "en_US": "iterations",
+                        "zh_CN": "迭代次数",
+                        "en": "iterations",
+                        "zh": "迭代次数"
+                    },
+                    "label": {
+                        "en_US": "iterations",
+                        "zh_CN": "迭代次数",
+                        "en": "iterations",
+                        "zh": "迭代次数"
+                    },
+                    "values": null,
+                    "description": "指对图像进行膨胀处理的次数，其值为正整数",
+                    "crrcDefualtValue": "1",
+                    "required": true,
+                    "minValue": "1",
+                    "maxValue": "100",
+                    "maxLength": null,
+                    "minLength": null,
+                    "numberType": "1",
+                    "oddEvenType": "2",
+                    "disabled": false
+                }
+            ],
+            "inputs": [
+                {
+                    "visualType": "0",
+                    "chartType": "",
+                    "label": {
+                        "en_US": "input",
+                        "en": "input",
+                        "zh_CN": "输入",
+                        "zh": "输入"
+                    },
+                    "value": ""
+                }
+            ],
+            "outputs": [
+                {
+                    "visualType": "0",
+                    "chartType": "",
+                    "label": {
+                        "en_US": "output",
+                        "en": "output",
+                        "zh_CN": "输出",
+                        "zh": "输出"
+                    },
+                    "value": ""
+                }
+            ],
+            "node": {
+                "icon": null,
+                "label": {
+                    "en_US": "dilation",
+                    "en": "dilation",
+                    "zh_CN": "膨胀",
+                    "zh": "膨胀"
+                },
+                "category": ""
+            }
+        }
+    ],
+    "properties": null
+  }

@@ -1,0 +1,65 @@
+{
+  "about": {
+    "author": {
+      "name": "\u7b97\u6cd5\u5f00\u53d1\u56e2\u961f"
+    },
+    "description": {
+      "zh_CN": "\u5bf9\u4e00\u7ef4\u4fe1\u53f7\u6267\u884c\u5feb\u901f\u5085\u91cc\u53f6\u53d8\u6362\uff0c\u5e76\u8f93\u51fa\u5355\u8fb9\u5e45\u503c\u8c31\u3002"
+    }
+  },
+  "version": "1.0",
+  "functions": [
+    {
+      "args": [],
+      "hint": {
+        "en": "fft_transform",
+        "zh": "FFT",
+        "en_US": "fft_transform",
+        "zh_CN": "FFT"
+      },
+      "name": "fft_transform",
+      "node": {
+        "label": {
+          "en": "fft_transform",
+          "zh": "FFT",
+          "en_US": "fft_transform",
+          "zh_CN": "FFT"
+        },
+        "category": ""
+      },
+      "inputs": [
+        {
+          "label": {
+            "en": "inputOne",
+            "zh": "\u8f93\u5165\u4e00",
+            "en_US": "inputOne",
+            "zh_CN": "\u8f93\u5165\u4e00"
+          },
+          "chartType": "LINE",
+          "visualType": "1"
+        }
+      ],
+      "example": "",
+      "outputs": [
+        {
+          "label": {
+            "en": "outputOne",
+            "zh": "\u8f93\u51fa\u4e00",
+            "en_US": "outputOne",
+            "zh_CN": "\u8f93\u51fa\u4e00"
+          },
+          "chartType": "LINE",
+          "visualType": "1"
+        }
+      ],
+      "aggregate": false,
+      "filesPath": "fft_transform.py",
+      "otherFilePath": null,
+      "armFilePath": [],
+      "amdFilePath": []
+    }
+  ],
+  "packageName": "fft_transform",
+  "dependencies": [],
+  "intelligentAlgorithm": false
+}

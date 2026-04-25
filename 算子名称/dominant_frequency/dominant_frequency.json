@@ -1,0 +1,113 @@
+{
+  "about": {
+    "author": {
+      "name": "\u7b97\u6cd5\u5f00\u53d1\u56e2\u961f"
+    },
+    "description": {
+      "zh_CN": "\u4f30\u8ba1\u5e45\u503c\u8c31\u4e2d\u7684\u4e3b\u9891\u3002"
+    }
+  },
+  "version": "1.0",
+  "functions": [
+    {
+      "args": [
+        {
+          "hint": {
+            "en": "sampling rate",
+            "zh": "\u91c7\u6837\u7387",
+            "en_US": "sampling rate",
+            "zh_CN": "\u91c7\u6837\u7387"
+          },
+          "name": "sampling_rate",
+          "rule": {
+            "extend": {
+              "list": [],
+              "operator": 0
+            },
+            "control": "text",
+            "confDataType": "float",
+            "numRule": {
+              "numMin": {
+                "sign": 4,
+                "value": "0"
+              },
+              "isEffect": true,
+              "numberType": 2,
+              "oddEvenType": 2
+            }
+          },
+          "type": "float",
+          "exist": false,
+          "label": {
+            "en": "sampling rate",
+            "zh": "\u91c7\u6837\u7387",
+            "en_US": "sampling rate",
+            "zh_CN": "\u91c7\u6837\u7387"
+          },
+          "hidden": false,
+          "control": "text",
+          "disabled": false,
+          "maxValue": "",
+          "minValue": "",
+          "optional": false,
+          "required": true,
+          "numberType": "2",
+          "description": "\u91c7\u6837\u7387\uff0c\u5fc5\u987b\u5927\u4e8e 0\u3002",
+          "oddEvenType": "2",
+          "isVirtualParam": "N",
+          "crrcDefualtValue": "1.0",
+          "connection_related": false
+        }
+      ],
+      "hint": {
+        "en": "dominant_frequency",
+        "zh": "\u4e3b\u9891",
+        "en_US": "dominant_frequency",
+        "zh_CN": "\u4e3b\u9891"
+      },
+      "name": "dominant_frequency",
+      "node": {
+        "label": {
+          "en": "dominant_frequency",
+          "zh": "\u4e3b\u9891",
+          "en_US": "dominant_frequency",
+          "zh_CN": "\u4e3b\u9891"
+        },
+        "category": ""
+      },
+      "inputs": [
+        {
+          "label": {
+            "en": "inputOne",
+            "zh": "\u8f93\u5165\u4e00",
+            "en_US": "inputOne",
+            "zh_CN": "\u8f93\u5165\u4e00"
+          },
+          "chartType": "LINE",
+          "visualType": "1"
+        }
+      ],
+      "example": "",
+      "outputs": [
+        {
+          "label": {
+            "en": "outputOne",
+            "zh": "\u8f93\u51fa\u4e00",
+            "en_US": "outputOne",
+            "zh_CN": "\u8f93\u51fa\u4e00"
+          },
+          "chartType": "LINE",
+          "visualType": "1"
+        }
+      ],
+      "aggregate": false,
+      "filesPath": "dominant_frequency.py",
+      "otherFilePath": null,
+      "armFilePath": [],
+      "amdFilePath": []
+    }
+  ],
+  "packageName": "dominant_frequency",
+  "dependencies": [],
+  "intelligentAlgorithm": false
+}

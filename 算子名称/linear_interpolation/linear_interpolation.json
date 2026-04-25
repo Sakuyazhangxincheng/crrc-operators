@@ -1,0 +1,113 @@
+{
+  "about": {
+    "author": {
+      "name": "\u7b97\u6cd5\u5f00\u53d1\u56e2\u961f"
+    },
+    "description": {
+      "zh_CN": "\u7ebf\u6027\u63d2\u503c\u7b97\u5b50\u7528\u4e8e\u5bf9\u4e00\u7ef4\u4fe1\u53f7\u6267\u884c\u91cd\u91c7\u6837\uff0c\u5c06\u539f\u59cb\u6570\u636e\u6620\u5c04\u5230\u6307\u5b9a\u8f93\u51fa\u957f\u5ea6\u3002"
+    }
+  },
+  "version": "1.0",
+  "functions": [
+    {
+      "args": [
+        {
+          "hint": {
+            "en": "output length",
+            "zh": "\u8f93\u51fa\u957f\u5ea6",
+            "en_US": "output length",
+            "zh_CN": "\u8f93\u51fa\u957f\u5ea6"
+          },
+          "name": "output_length",
+          "rule": {
+            "extend": {
+              "list": [],
+              "operator": 0
+            },
+            "control": "text",
+            "numRule": {
+              "numMin": {
+                "sign": 4,
+                "value": "2"
+              },
+              "isEffect": true,
+              "numberType": 1,
+              "oddEvenType": 2
+            },
+            "confDataType": "int"
+          },
+          "type": "int",
+          "exist": false,
+          "label": {
+            "en": "output length",
+            "zh": "\u8f93\u51fa\u957f\u5ea6",
+            "en_US": "output length",
+            "zh_CN": "\u8f93\u51fa\u957f\u5ea6"
+          },
+          "hidden": false,
+          "control": "text",
+          "disabled": false,
+          "maxValue": "",
+          "minValue": "",
+          "optional": false,
+          "required": true,
+          "numberType": "2",
+          "description": "\u76ee\u6807\u8f93\u51fa\u5e8f\u5217\u957f\u5ea6\uff0c\u5fc5\u987b\u4e3a\u5927\u4e8e\u7b49\u4e8e 2 \u7684\u6574\u6570\u3002",
+          "oddEvenType": "2",
+          "isVirtualParam": "N",
+          "crrcDefualtValue": "10",
+          "connection_related": false
+        }
+      ],
+      "hint": {
+        "en": "linearInterpolation",
+        "zh": "\u7ebf\u6027\u63d2\u503c",
+        "en_US": "linearInterpolation",
+        "zh_CN": "\u7ebf\u6027\u63d2\u503c"
+      },
+      "name": "linear_interpolation",
+      "node": {
+        "label": {
+          "en": "linearInterpolation",
+          "zh": "\u7ebf\u6027\u63d2\u503c",
+          "en_US": "linearInterpolation",
+          "zh_CN": "\u7ebf\u6027\u63d2\u503c"
+        },
+        "category": ""
+      },
+      "inputs": [
+        {
+          "label": {
+            "en": "inputOne",
+            "zh": "\u8f93\u5165\u4e00",
+            "en_US": "inputOne",
+            "zh_CN": "\u8f93\u5165\u4e00"
+          },
+          "chartType": "LINE",
+          "visualType": "1"
+        }
+      ],
+      "example": "",
+      "outputs": [
+        {
+          "label": {
+            "en": "outputOne",
+            "zh": "\u8f93\u51fa\u4e00",
+            "en_US": "outputOne",
+            "zh_CN": "\u8f93\u51fa\u4e00"
+          },
+          "chartType": "LINE",
+          "visualType": "1"
+        }
+      ],
+      "aggregate": false,
+      "filesPath": "linear_interpolation.py",
+      "otherFilePath": null,
+      "armFilePath": [],
+      "amdFilePath": []
+    }
+  ],
+  "packageName": "linear_interpolation",
+  "dependencies": [],
+  "intelligentAlgorithm": false
+}

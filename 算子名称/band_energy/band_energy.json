@@ -1,0 +1,160 @@
+{
+  "about": {
+    "author": {
+      "name": "\u7b97\u6cd5\u5f00\u53d1\u56e2\u961f"
+    },
+    "description": {
+      "zh_CN": "\u8ba1\u7b97\u4e00\u7ef4\u4fe1\u53f7\u5728\u6307\u5b9a\u5f52\u4e00\u5316\u9891\u5e26\u5185\u7684\u9891\u8c31\u80fd\u91cf\u3002"
+    }
+  },
+  "version": "1.0",
+  "functions": [
+    {
+      "args": [
+        {
+          "hint": {
+            "en": "low ratio",
+            "zh": "\u4f4e\u9891\u6bd4\u503c",
+            "en_US": "low ratio",
+            "zh_CN": "\u4f4e\u9891\u6bd4\u503c"
+          },
+          "name": "low_ratio",
+          "rule": {
+            "extend": {
+              "list": [],
+              "operator": 0
+            },
+            "control": "text",
+            "confDataType": "float",
+            "numRule": {
+              "numMin": {
+                "sign": 4,
+                "value": "0"
+              },
+              "isEffect": true,
+              "numberType": 2,
+              "oddEvenType": 2
+            }
+          },
+          "type": "float",
+          "exist": false,
+          "label": {
+            "en": "low ratio",
+            "zh": "\u4f4e\u9891\u6bd4\u503c",
+            "en_US": "low ratio",
+            "zh_CN": "\u4f4e\u9891\u6bd4\u503c"
+          },
+          "hidden": false,
+          "control": "text",
+          "disabled": false,
+          "maxValue": "",
+          "minValue": "",
+          "optional": false,
+          "required": true,
+          "numberType": "2",
+          "description": "\u9891\u5e26\u4e0b\u754c\uff0c\u53d6\u503c\u8303\u56f4 0 <= low_ratio < 0.5\u3002",
+          "oddEvenType": "2",
+          "isVirtualParam": "N",
+          "crrcDefualtValue": "0.1",
+          "connection_related": false
+        },
+        {
+          "hint": {
+            "en": "high ratio",
+            "zh": "\u9ad8\u9891\u6bd4\u503c",
+            "en_US": "high ratio",
+            "zh_CN": "\u9ad8\u9891\u6bd4\u503c"
+          },
+          "name": "high_ratio",
+          "rule": {
+            "extend": {
+              "list": [],
+              "operator": 0
+            },
+            "control": "text",
+            "confDataType": "float",
+            "numRule": {
+              "numMin": {
+                "sign": 4,
+                "value": "0"
+              },
+              "isEffect": true,
+              "numberType": 2,
+              "oddEvenType": 2
+            }
+          },
+          "type": "float",
+          "exist": false,
+          "label": {
+            "en": "high ratio",
+            "zh": "\u9ad8\u9891\u6bd4\u503c",
+            "en_US": "high ratio",
+            "zh_CN": "\u9ad8\u9891\u6bd4\u503c"
+          },
+          "hidden": false,
+          "control": "text",
+          "disabled": false,
+          "maxValue": "",
+          "minValue": "",
+          "optional": false,
+          "required": true,
+          "numberType": "2",
+          "description": "\u9891\u5e26\u4e0a\u754c\uff0c\u53d6\u503c\u8303\u56f4 low_ratio < high_ratio <= 0.5\u3002",
+          "oddEvenType": "2",
+          "isVirtualParam": "N",
+          "crrcDefualtValue": "0.3",
+          "connection_related": false
+        }
+      ],
+      "hint": {
+        "en": "band_energy",
+        "zh": "\u9891\u5e26\u80fd\u91cf",
+        "en_US": "band_energy",
+        "zh_CN": "\u9891\u5e26\u80fd\u91cf"
+      },
+      "name": "band_energy",
+      "node": {
+        "label": {
+          "en": "band_energy",
+          "zh": "\u9891\u5e26\u80fd\u91cf",
+          "en_US": "band_energy",
+          "zh_CN": "\u9891\u5e26\u80fd\u91cf"
+        },
+        "category": ""
+      },
+      "inputs": [
+        {
+          "label": {
+            "en": "inputOne",
+            "zh": "\u8f93\u5165\u4e00",
+            "en_US": "inputOne",
+            "zh_CN": "\u8f93\u5165\u4e00"
+          },
+          "chartType": "LINE",
+          "visualType": "1"
+        }
+      ],
+      "example": "",
+      "outputs": [
+        {
+          "label": {
+            "en": "outputOne",
+            "zh": "\u8f93\u51fa\u4e00",
+            "en_US": "outputOne",
+            "zh_CN": "\u8f93\u51fa\u4e00"
+          },
+          "chartType": "LINE",
+          "visualType": "1"
+        }
+      ],
+      "aggregate": false,
+      "filesPath": "band_energy.py",
+      "otherFilePath": null,
+      "armFilePath": [],
+      "amdFilePath": []
+    }
+  ],
+  "packageName": "band_energy",
+  "dependencies": [],
+  "intelligentAlgorithm": false
+}

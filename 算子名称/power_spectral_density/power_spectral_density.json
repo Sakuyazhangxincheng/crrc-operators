@@ -1,0 +1,65 @@
+{
+  "about": {
+    "author": {
+      "name": "\u7b97\u6cd5\u5f00\u53d1\u56e2\u961f"
+    },
+    "description": {
+      "zh_CN": "\u4f30\u8ba1\u4e00\u7ef4\u4fe1\u53f7\u7684\u5355\u8fb9\u529f\u7387\u8c31\u5bc6\u5ea6\uff08\u5468\u671f\u56fe\u6cd5\uff09\u3002"
+    }
+  },
+  "version": "1.0",
+  "functions": [
+    {
+      "args": [],
+      "hint": {
+        "en": "power_spectral_density",
+        "zh": "\u529f\u7387\u8c31\u5bc6\u5ea6",
+        "en_US": "power_spectral_density",
+        "zh_CN": "\u529f\u7387\u8c31\u5bc6\u5ea6"
+      },
+      "name": "power_spectral_density",
+      "node": {
+        "label": {
+          "en": "power_spectral_density",
+          "zh": "\u529f\u7387\u8c31\u5bc6\u5ea6",
+          "en_US": "power_spectral_density",
+          "zh_CN": "\u529f\u7387\u8c31\u5bc6\u5ea6"
+        },
+        "category": ""
+      },
+      "inputs": [
+        {
+          "label": {
+            "en": "inputOne",
+            "zh": "\u8f93\u5165\u4e00",
+            "en_US": "inputOne",
+            "zh_CN": "\u8f93\u5165\u4e00"
+          },
+          "chartType": "LINE",
+          "visualType": "1"
+        }
+      ],
+      "example": "",
+      "outputs": [
+        {
+          "label": {
+            "en": "outputOne",
+            "zh": "\u8f93\u51fa\u4e00",
+            "en_US": "outputOne",
+            "zh_CN": "\u8f93\u51fa\u4e00"
+          },
+          "chartType": "LINE",
+          "visualType": "1"
+        }
+      ],
+      "aggregate": false,
+      "filesPath": "power_spectral_density.py",
+      "otherFilePath": null,
+      "armFilePath": [],
+      "amdFilePath": []
+    }
+  ],
+  "packageName": "power_spectral_density",
+  "dependencies": [],
+  "intelligentAlgorithm": false
+}

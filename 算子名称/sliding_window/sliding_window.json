@@ -1,0 +1,160 @@
+{
+  "about": {
+    "author": {
+      "name": "\u7b97\u6cd5\u5f00\u53d1\u56e2\u961f"
+    },
+    "description": {
+      "zh_CN": "\u6309\u7a97\u53e3\u957f\u5ea6\u548c\u6b65\u957f\u5bf9\u4e00\u7ef4\u5e8f\u5217\u6ed1\u52a8\u5207\u7247\u3002"
+    }
+  },
+  "version": "1.0",
+  "functions": [
+    {
+      "args": [
+        {
+          "hint": {
+            "en": "window size",
+            "zh": "\u7a97\u53e3\u957f\u5ea6",
+            "en_US": "window size",
+            "zh_CN": "\u7a97\u53e3\u957f\u5ea6"
+          },
+          "name": "window_size",
+          "rule": {
+            "extend": {
+              "list": [],
+              "operator": 0
+            },
+            "control": "text",
+            "confDataType": "int",
+            "numRule": {
+              "numMin": {
+                "sign": 4,
+                "value": "1"
+              },
+              "isEffect": true,
+              "numberType": 1,
+              "oddEvenType": 2
+            }
+          },
+          "type": "int",
+          "exist": false,
+          "label": {
+            "en": "window size",
+            "zh": "\u7a97\u53e3\u957f\u5ea6",
+            "en_US": "window size",
+            "zh_CN": "\u7a97\u53e3\u957f\u5ea6"
+          },
+          "hidden": false,
+          "control": "text",
+          "disabled": false,
+          "maxValue": "",
+          "minValue": "",
+          "optional": false,
+          "required": true,
+          "numberType": "2",
+          "description": "\u7a97\u53e3\u957f\u5ea6",
+          "oddEvenType": "2",
+          "isVirtualParam": "N",
+          "crrcDefualtValue": "10",
+          "connection_related": false
+        },
+        {
+          "hint": {
+            "en": "step",
+            "zh": "\u6b65\u957f",
+            "en_US": "step",
+            "zh_CN": "\u6b65\u957f"
+          },
+          "name": "step",
+          "rule": {
+            "extend": {
+              "list": [],
+              "operator": 0
+            },
+            "control": "text",
+            "confDataType": "int",
+            "numRule": {
+              "numMin": {
+                "sign": 4,
+                "value": "1"
+              },
+              "isEffect": true,
+              "numberType": 1,
+              "oddEvenType": 2
+            }
+          },
+          "type": "int",
+          "exist": false,
+          "label": {
+            "en": "step",
+            "zh": "\u6b65\u957f",
+            "en_US": "step",
+            "zh_CN": "\u6b65\u957f"
+          },
+          "hidden": false,
+          "control": "text",
+          "disabled": false,
+          "maxValue": "",
+          "minValue": "",
+          "optional": false,
+          "required": true,
+          "numberType": "2",
+          "description": "\u6b65\u957f",
+          "oddEvenType": "2",
+          "isVirtualParam": "N",
+          "crrcDefualtValue": "1",
+          "connection_related": false
+        }
+      ],
+      "hint": {
+        "en": "sliding_window",
+        "zh": "\u6ed1\u52a8\u7a97\u53e3",
+        "en_US": "sliding_window",
+        "zh_CN": "\u6ed1\u52a8\u7a97\u53e3"
+      },
+      "name": "sliding_window",
+      "node": {
+        "label": {
+          "en": "sliding_window",
+          "zh": "\u6ed1\u52a8\u7a97\u53e3",
+          "en_US": "sliding_window",
+          "zh_CN": "\u6ed1\u52a8\u7a97\u53e3"
+        },
+        "category": ""
+      },
+      "inputs": [
+        {
+          "label": {
+            "en": "inputOne",
+            "zh": "\u8f93\u5165\u4e00",
+            "en_US": "inputOne",
+            "zh_CN": "\u8f93\u5165\u4e00"
+          },
+          "chartType": "LINE",
+          "visualType": "1"
+        }
+      ],
+      "example": "",
+      "outputs": [
+        {
+          "label": {
+            "en": "outputOne",
+            "zh": "\u8f93\u51fa\u4e00",
+            "en_US": "outputOne",
+            "zh_CN": "\u8f93\u51fa\u4e00"
+          },
+          "chartType": "LINE",
+          "visualType": "1"
+        }
+      ],
+      "aggregate": false,
+      "filesPath": "sliding_window.py",
+      "otherFilePath": null,
+      "armFilePath": [],
+      "amdFilePath": []
+    }
+  ],
+  "packageName": "sliding_window",
+  "dependencies": [],
+  "intelligentAlgorithm": false
+}
