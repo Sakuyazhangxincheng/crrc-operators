@@ -13,16 +13,24 @@ import numpy as np
 import pandas as pd
 
 import op_detrend
+import op_downsample
 import op_feature_band_energy
 import op_feature_crest_factor
 import op_feature_dominant_frequency
 import op_feature_kurtosis
+import op_feature_mean
 import op_feature_rms
+import op_fft_transform
 import op_fill_missing
 import op_fixed_time_window
 import op_hanning_window
 import op_linear_interpolate
+import op_normalization
+import op_pca_transform
+import op_power_spectral_density
 import op_sliding_window
+import op_standardization
+import op_three_sigma_filter
 import op_timestamp_alignment
 from core_wrapper import operator_wrapper
 
@@ -292,4 +300,113 @@ def test_wrapper_injects_context_fields():
     )
 
 
+def test_op_three_sigma_filter_replaces_outlier():
+    # 20.0 超出 sigma=2 的上界（mean≈4.92, std≈6.77, upper≈18.46）
+    data = [1.0, 2.0, 3.0, 2.0, 1.5, 20.0]
+    df = pd.DataFrame({"x": data})
+    out_df, _ = _run_operator(op_three_sigma_filter.process, df, [0], {"sigma": 2.0})
+    mean = float(np.mean(data))
+    assert abs(out_df.loc[5, "x"] - mean) < 1e-12
+    assert out_df.loc[0, "x"] == 1.0
 
+
+def test_op_three_sigma_filter_no_outlier():
+    data = [1.0, 2.0, 3.0, 2.5]
+    df = pd.DataFrame({"x": data})
+    out_df, _ = _run_operator(op_three_sigma_filter.process, df, [0], {"sigma": 3.0})
+    assert out_df["x"].tolist() == data
+
+
+def test_op_feature_mean_basic():
+    df = pd.DataFrame({"x": [2.0, 4.0, 6.0]})
+    out_df, _ = _run_operator(op_feature_mean.process, df, [0], {})
+    assert abs(out_df.loc[0, "x_Mean"] - 4.0) < 1e-12
+
+
+def test_op_feature_mean_with_nan():
+    df = pd.DataFrame({"x": [1.0, np.nan, 3.0]})
+    out_df, _ = _run_operator(op_feature_mean.process, df, [0], {})
+    assert abs(out_df.loc[0, "x_Mean"] - 2.0) < 1e-12
+
+
+def test_op_fft_output_shape():
+    n = 8
+    df = pd.DataFrame({"x": np.ones(n)})
+    out_df, _ = _run_operator(op_fft_transform.process, df, [0], {"sampling_rate": 100.0})
+    assert len(out_df) == n // 2 + 1
+    assert "freq" in out_df.columns
+    assert "x" in out_df.columns
+
+
+def test_op_fft_dc_signal():
+    n = 16
+    df = pd.DataFrame({"x": np.ones(n) * 3.0})
+    out_df, _ = _run_operator(op_fft_transform.process, df, [0], {})
+    assert abs(out_df.loc[0, "x"] - n * 3.0) < 1e-6
+    assert all(abs(out_df.loc[1:, "x"]) < 1e-6)
+
+
+def test_op_downsample_factor2():
+    df = pd.DataFrame({"x": [1, 2, 3, 4, 5, 6]})
+    out_df, _ = _run_operator(op_downsample.process, df, [0], {"factor": 2})
+    assert out_df["x"].tolist() == [1, 3, 5]
+
+
+def test_op_downsample_preserves_other_cols():
+    df = pd.DataFrame({"ts": ["a", "b", "c", "d"], "x": [1.0, 2.0, 3.0, 4.0]})
+    out_df, _ = _run_operator(op_downsample.process, df, [1], {"factor": 2})
+    assert out_df["ts"].tolist() == ["a", "c"]
+    assert out_df["x"].tolist() == [1.0, 3.0]
+
+
+def test_op_power_spectral_density_shape():
+    n = 10
+    df = pd.DataFrame({"x": np.random.default_rng(0).random(n)})
+    out_df, _ = _run_operator(op_power_spectral_density.process, df, [0], {"sampling_rate": 50.0})
+    assert len(out_df) == n // 2 + 1
+    assert "freq" in out_df.columns
+    assert (out_df["x"] >= 0).all()
+
+
+def test_op_normalization_range():
+    df = pd.DataFrame({"x": [2.0, 4.0, 6.0, 8.0]})
+    out_df, _ = _run_operator(op_normalization.process, df, [0], {})
+    assert abs(out_df["x"].min()) < 1e-12
+    assert abs(out_df["x"].max() - 1.0) < 1e-12
+
+
+def test_op_normalization_constant():
+    df = pd.DataFrame({"x": [5.0, 5.0, 5.0]})
+    out_df, _ = _run_operator(op_normalization.process, df, [0], {})
+    assert (out_df["x"] == 0.0).all()
+
+
+def test_op_standardization_mean_std():
+    df = pd.DataFrame({"x": [2.0, 4.0, 6.0, 8.0]})
+    out_df, _ = _run_operator(op_standardization.process, df, [0], {})
+    assert abs(out_df["x"].mean()) < 1e-10
+    assert abs(out_df["x"].std(ddof=0) - 1.0) < 1e-10
+
+
+def test_op_standardization_constant():
+    df = pd.DataFrame({"x": [3.0, 3.0, 3.0]})
+    out_df, _ = _run_operator(op_standardization.process, df, [0], {})
+    assert (out_df["x"] == 0.0).all()
+
+
+def test_op_pca_reduces_dimensions():
+    rng = np.random.default_rng(42)
+    data = rng.random((20, 3))
+    df = pd.DataFrame(data, columns=["a", "b", "c"])
+    out_df, _ = _run_operator(op_pca_transform.process, df, [0, 1, 2], {"n_components": 2})
+    assert list(out_df.columns) == ["pc1", "pc2"]
+    assert len(out_df) == 20
+
+
+def test_op_pca_preserves_variance():
+    # 线性相关数据：PCA 第一主成分应捕获几乎全部方差
+    x = np.linspace(0, 1, 50)
+    df = pd.DataFrame({"a": x, "b": x * 2 + 0.001 * np.random.default_rng(0).random(50)})
+    out_df, _ = _run_operator(op_pca_transform.process, df, [0, 1], {"n_components": 1})
+    assert list(out_df.columns) == ["pc1"]
+    assert len(out_df) == 50
