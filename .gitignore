@@ -4,6 +4,11 @@ __pycache__/
 .ipynb_checkpoints/
 .DS_Store
 
+# Virtual environments
+.venv/
+venv/
+env/
+
 # Reference materials (nested repo, large files)
 算子开发文件/
 

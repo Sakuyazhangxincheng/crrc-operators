@@ -2,6 +2,17 @@
 
 > 本文件供 Cursor、Codex、Claude Code 等执行型 Agent 读取。
 > Hermes 负责在项目进展时更新本文件。
+>
+> **⚡ 启动顺序**：请按以下顺序读取，避免全盘扫描：
+> 1. **本文件** — 项目架构、约定、技术栈
+> 2. **`.hermes/plan/SETUP.md`** — 环境踩坑经验（WSL 配置、命令差异等）
+> 3. **`.hermes/plan/STATUS.md`** — 当前进度、阶段、下一步（30 秒了解全貌）
+> 4. `.hermes/session-log.md` — 最近工作细节（按需）
+>
+> **📋 环境信息**：详见 [workspace/ENVIRONMENTS.md](../ENVIRONMENTS.md#4-crrc-operators)
+> - Python · `.venv/` ✅ 已就绪（opencv/numpy/pandas）
+> - 激活：`.venv/bin/python` 或 `source .venv/bin/activate`
+> - 关键依赖：opencv-python, numpy, pandas
 
 ---
 
@@ -16,13 +27,20 @@
 
 ## 与 Hermes 的通信机制
 
-本项目使用 `.hermes/` 目录与 workspace 总协调 Agent（Hermes）通信：
+本项目使用 `.hermes/` 目录进行多 Agent 协调：
 
 | 文件 | 谁写 | 谁读 | 用途 |
 |------|------|------|------|
-| `.hermes/session-log.md` | **你（Cursor/Codex/Claude Code）** | Hermes | 每次会话后追加：做了什么、结果、需要什么 |
-| `.hermes/handoff.md` | **你** | Hermes | 需要 Hermes 处理的事项（写完后 Hermes 会清空） |
-| `.hermes/bulletin.md` | Hermes | **你** | Hermes 广播的优先级和状态变更 |
+| `.hermes/plan/STATUS.md` | 任何 Agent | 任何 Agent | **进度快照**（覆盖式）：当前阶段、最近完成、正在进行 |
+| `.hermes/plan/board.md` | Dev/Test Agent | Dev/Test Agent | **协调面板**：任务看板 + 测试报告 + 交接留言 |
+| `.hermes/plan/daily/YYYY-MM-DD.md` | 任何 Agent | sakuya/Hermes | **每日日志**（追加式）：当天工作内容 |
+| `.hermes/session-log.md` | 任何 Agent | Hermes | 每次会话简要摘要 |
+| `.hermes/handoff.md` | 任何 Agent | Hermes | 需要 Hermes 处理的事项 |
+| `.hermes/bulletin.md` | Hermes | 任何 Agent | 优先级和状态变更广播 |
+
+**Agent 启动顺序**：AGENTS.md → STATUS.md → board.md → 开工
+**每日结束**：追加 daily/YYYY-MM-DD.md + session-log.md
+**阶段完成**：更新 STATUS.md → 在 board.md 留言给对端 Agent
 
 **请每次会话结束后追加一条 session-log**，格式：
 ```
