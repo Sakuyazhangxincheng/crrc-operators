@@ -13,6 +13,8 @@
 > - Python · `.venv/` ✅ 已就绪（opencv/numpy/pandas）
 > - 激活：`.venv/bin/python` 或 `source .venv/bin/activate`
 > - 关键依赖：opencv-python, numpy, pandas
+>
+> **🌐 语言规范**：代码注释、文档、commit message 一律中文。详见 [workspace/AGENTS.md](../AGENTS.md)
 
 ---
 
