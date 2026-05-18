@@ -51,3 +51,29 @@
 - 结果：简要结果
 - 需要Hermes：无 / 具体事项
 ```
+
+---
+
+## 📚 Skill 支持（2026-05-17 新增）
+
+本项目 Agent（Cursor/Codex）可以加载 workspace 共享的 skill 库。
+
+### 如何使用
+
+```
+1. read_file ~/workspace/.hermes/skills/SKILLS_INDEX.md   ← 先看索引，找需要的 skill
+2. read_file <索引用列出的路径>                              ← 加载 skill 正文
+3. 按 skill 中的步骤执行
+```
+
+### 本项目的推荐 Skill
+
+| 场景 | Skill | 路径 |
+|------|-------|------|
+| 汇报项目状态 | project-briefing | `~/.hermes/skills/project-briefing/SKILL.md` |
+| 更新项目文档 | project-audit-agents-update | `~/.hermes/skills/project-audit-agents-update/SKILL.md` |
+| TDD 开发 | test-driven-development | `~/.hermes/skills/software-development/test-driven-development/SKILL.md` |
+| Bug 调试 | systematic-debugging | `~/.hermes/skills/software-development/systematic-debugging/SKILL.md` |
+| Python 调试 | python-debugpy | `~/.hermes/skills/software-development/python-debugpy/SKILL.md` |
+
+> 完整索引见 `~/workspace/.hermes/skills/SKILLS_INDEX.md`
