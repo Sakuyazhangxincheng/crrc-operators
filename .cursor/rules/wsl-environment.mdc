@@ -1,0 +1,69 @@
+---
+description: 所有 Shell 命令通过 WSL 运行；working_directory 必须设为 C:\；使用 conda 完整路径
+alwaysApply: true
+---
+
+# WSL 执行环境（来自 LLM 项目 Cursor 实战经验，所有项目通用）
+
+本工作区所有文件在 WSL Ubuntu 内。以下是 Cursor 实际踩坑后总结的必遵守则。
+
+## 约束1：working_directory 必须是 `C:\`
+
+Shell 工具启动时如果 cwd 是 `\\wsl.localhost\...` 这类 UNC 路径，PowerShell 会**吞掉所有输出**（命令运行、exit code 为 0，但 output 为空）。
+
+**每次 Shell 调用都必须加：**
+```
+working_directory: "C:\"
+```
+
+## 约束2：命令用 `wsl -d Ubuntu bash -c "..."` 执行
+
+必须带 `-d Ubuntu`，否则路径翻译可能失败。
+
+```powershell
+wsl -d Ubuntu bash -c "<Linux命令>"
+```
+
+## 约束3：用 conda 环境的完整 Python 路径
+
+不要依赖 `conda activate`（Shell 工具无状态），直接用 python 二进制路径。
+
+| 环境名 | Python 路径 |
+|--------|-----------|
+| llm | `/home/sakuya/miniconda3/envs/llm/bin/python` |
+| industrial-health | `/home/sakuya/miniconda3/envs/industrial-health/bin/python` |
+| smart-chem | `/home/sakuya/miniconda3/envs/smart-chem/bin/python` |
+| crrc-operators | `/home/sakuya/miniconda3/envs/crrc-operators/bin/python` |
+
+## 完整示例
+
+```powershell
+# 运行 Python 脚本
+wsl -d Ubuntu bash -c "/home/sakuya/miniconda3/envs/llm/bin/python /home/sakuya/workspace/LLM/LangChain/01_tool_calling/demo.py"
+
+# 运行测试
+wsl -d Ubuntu bash -c "cd /home/sakuya/workspace/LLM && /home/sakuya/miniconda3/envs/llm/bin/python -m pytest"
+
+# 检查所有 conda 环境
+wsl -d Ubuntu bash -c "/home/sakuya/miniconda3/bin/conda info --envs"
+
+# 查看项目文件
+wsl -d Ubuntu bash -c "ls -la /home/sakuya/workspace/LLM"
+```
+
+## 项目路径速查
+
+| 项目 | 路径 |
+|------|------|
+| LLM | `/home/sakuya/workspace/LLM` |
+| industrial-health-assessment | `/home/sakuya/workspace/industrial-health-assessment` |
+| Smart-Chem | `/home/sakuya/workspace/Smart-Chem` |
+| crrc-operators | `/home/sakuya/workspace/crrc-operators` |
+| ccit-aicoding | `/home/sakuya/workspace/ccit-aicoding` |
+
+## 禁止事项
+
+- ❌ 省略 `working_directory: "C:\"`（导致输出被吞——最隐蔽的坑）
+- ❌ 直接 `python`、`python3`（conda 未激活，找不到命令）
+- ❌ `wsl bash -c "..."` 不带 `-d Ubuntu`（路径翻译可能失败）
+- ❌ 用逻辑推理代替实际运行 Python 代码（必须看到输出）
